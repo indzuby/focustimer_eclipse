@@ -1,0 +1,312 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical"
+    tools:context="com.realnumworks.focustimer.SettingsActivity" >
+
+    <!-- 일반 -->
+
+    <com.mobsandgeeks.ui.TypefaceTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_header_height"
+        android:background="#DCDCDC"
+        android:paddingLeft="14dp"
+        android:paddingTop="5dp"
+        android:text="일반"
+        android:textColor="#595959"
+        android:textSize="14sp"
+        geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+    <!-- 시작 요일/일요일 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_list_height"
+        android:gravity="center_vertical" >
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="시작 요일"
+            android:textColor="@color/ft_black"
+            android:textSize="18sp"
+            geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+        <RelativeLayout
+            android:id="@+id/layout_settings_weekday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_settings_weekday"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="45dp"
+                android:background="@color/transparent"
+                android:gravity="center_vertical|right"
+                android:text="일요일"
+                android:textColor="#989898"
+                android:textSize="18sp"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+            <ImageView
+                android:id="@+id/iv_settings_weekday"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_setting_right_arrow_3x" 
+                android:contentDescription="TODO"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC" />
+    
+    <!-- 집중 시작 진동/켬 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_list_height"
+        android:gravity="center_vertical" >
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="집중 시작 진동"
+            android:textColor="@color/ft_black"
+            android:textSize="18sp"
+            geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+        <RelativeLayout
+            android:id="@+id/layout_settings_vibrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_settings_vibrate"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="45dp"
+                android:background="@color/transparent"
+                android:gravity="center_vertical|right"
+                android:text="일요일"
+                android:textColor="#989898"
+                android:textSize="18sp"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+            <ImageView
+                android:id="@+id/iv_settings_vibrate"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_setting_right_arrow_3x" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC" />
+
+    <!-- 시간 알림 -->
+
+    <com.mobsandgeeks.ui.TypefaceTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_header_height"
+        android:background="#DCDCDC"
+        android:paddingLeft="14dp"
+        android:paddingTop="5dp"
+        android:text="시간 알림"
+        android:textColor="#595959"
+        android:textSize="14sp"
+        geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+    <!-- 알람 1 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_list_height"
+        android:gravity="center_vertical" >
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="시간 알림 1"
+            android:textColor="@color/ft_black"
+            android:textSize="18sp"
+            geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+        <RelativeLayout
+            android:id="@+id/layout_settings_alarm01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_settings_alarm01"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="45dp"
+                android:background="@color/transparent"
+                android:gravity="center_vertical|right"
+                android:text="15분"
+                android:textColor="#989898"
+                android:textSize="18sp"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+            <ImageView
+                android:id="@+id/iv_settings_alarm01"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_setting_right_arrow_3x" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC" />
+
+    <!-- 알람 2 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_list_height"
+        android:gravity="center_vertical" >
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="시간 알림 2"
+            android:textColor="@color/ft_black"
+            android:textSize="18sp"
+            geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+        <RelativeLayout
+            android:id="@+id/layout_settings_alarm02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_settings_alarm02"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="45dp"
+                android:background="@color/transparent"
+                android:gravity="center_vertical|right"
+                android:text="30분"
+                android:textColor="#989898"
+                android:textSize="18sp"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+            <ImageView
+                android:id="@+id/iv_settings_alarm02"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_setting_right_arrow_3x" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC" />
+
+    <!-- 정보 -->
+
+    <com.mobsandgeeks.ui.TypefaceTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_header_height"
+        android:background="#DCDCDC"
+        android:paddingLeft="14dp"
+        android:paddingTop="5dp"
+        android:text="정보"
+        android:textColor="#595959"
+        android:textSize="14sp"
+        geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+    <!-- 버전 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_list_height"
+        android:gravity="center_vertical" >
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="버전"
+            android:textColor="@color/ft_black"
+            android:textSize="18sp"
+            geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:id="@+id/tv_settings_version"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="45dp"
+            android:background="@color/transparent"
+            android:gravity="center_vertical|right"
+            android:text="1_1"
+            android:textColor="#989898"
+            android:textSize="18sp"
+            geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC" />
+
+    <com.mobsandgeeks.ui.TypefaceTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F7F7"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:singleLine="false"
+        android:text="copyright(C)2015\nAll rights reserved by Real Number Works\n\ndirected by JR\nmade by Rashad\ndesigned by Nalyn"
+        android:textColor="#595959"
+        android:textSize="14sp"
+        geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+</LinearLayout>

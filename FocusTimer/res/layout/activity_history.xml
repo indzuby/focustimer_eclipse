@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ft_white"
+    android:orientation="vertical"
+    tools:context="com.realnumworks.focustimer.RecordActivity" >
+
+    <!-- 배경화면 Layout에 씌우고 Button은 색만 채우기 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#f7f7f7"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="305dp"
+            android:layout_height="30dp"
+            android:background="@color/ft_jadeblue"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tvbtn_history_each"
+                android:layout_width="75dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/selector_historybtn"
+                android:gravity="center"
+                android:text="개별"
+                android:textColor="@drawable/selector_historybtn_textcolor"
+                android:textSize="14dp"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tvbtn_history_day"
+                android:layout_width="75dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/selector_historybtn"
+                android:gravity="center"
+                android:text="일별"
+                android:textColor="@drawable/selector_historybtn_textcolor"
+                android:textSize="14dp"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tvbtn_history_week"
+                android:layout_width="75dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/selector_historybtn"
+                android:gravity="center"
+                android:text="주별"
+                android:textColor="@drawable/selector_historybtn_textcolor"
+                android:textSize="14dp"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tvbtn_history_month"
+                android:layout_width="75dp"
+                android:layout_height="28dp"
+                android:background="@drawable/selector_historybtn"
+                android:gravity="center"
+                android:text="월별"
+                android:textColor="@drawable/selector_historybtn_textcolor"
+                android:textSize="14dp"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/list_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.mobsandgeeks.ui.TypefaceTextView
+        android:id="@+id/tv_history_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="저장된 데이터가 없습니다"
+        android:textColor="#909090"
+        android:textSize="24dp"
+        android:visibility="gone"
+        geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+</LinearLayout>

@@ -1,0 +1,217 @@
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    xmlns:app="http://schemas.android.com/apk/res-auto"
+	    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+	    android:id="@+id/layout_timer_whole"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+	
+	    <com.mobsandgeeks.ui.TypefaceTextView
+	        android:id="@+id/tv_timer_nowfocusing"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="center"
+	        android:gravity="center"
+	        android:text="Focusing"
+	        android:textColor="@color/ft_white"
+	        android:textSize="30dp"
+	        geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+	
+	    <LinearLayout
+	        android:id="@+id/layout_timer_main"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:gravity="center_horizontal"
+	        android:orientation="vertical"
+	        android:visibility="gone"
+	        tools:context="com.realnumworks.focustimer.TimerActivity" >
+	
+	        <com.mobsandgeeks.ui.TypefaceTextView
+	            android:id="@+id/tv_timer_3sec"
+	            android:layout_width="300dp"
+	            android:layout_height="331dp"
+	            android:layout_gravity="center_horizontal"
+	            android:layout_marginTop="40dp"
+	            android:gravity="center"
+	            android:text="3초 미만 집중은 저장되지 않습니다."
+	            android:textColor="@color/ft_white"
+	            android:textSize="18dp"
+	            android:visibility="gone"
+	            geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+	
+	        <!-- 이번 집중 시간은 & 동그라미 영역 -->
+	
+	        <LinearLayout
+	            android:id="@+id/layout_timer_focusingcircle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_horizontal"
+	            android:orientation="vertical" >
+	
+	            <!-- TextBox -->
+	
+	            <com.mobsandgeeks.ui.TypefaceTextView
+	                android:layout_width="300dp"
+	                android:layout_height="32dp"
+	                android:layout_marginTop="56dp"
+	                android:gravity="center"
+	                android:text="이번 집중 시간은"
+	                android:textColor="@color/ft_white"
+	                android:textSize="18dp"
+	                android:visibility="visible"
+	                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+	
+	            <!-- 동그라미 -->
+	
+	            <RelativeLayout
+	                android:id="@+id/layout_timer_circle"
+	                android:layout_width="250dp"
+	                android:layout_height="250dp"
+	                android:layout_gravity="center_horizontal"
+	                android:layout_marginTop="33dp"
+	                android:background="@drawable/result_circle"
+	                android:gravity="center"
+	                android:visibility="visible" >
+	
+	                <RelativeLayout
+	                    android:layout_width="match_parent"
+	                    android:layout_height="100dp"
+	                    android:gravity="center_vertical"
+	                    android:orientation="horizontal" >
+	
+	                    <!-- 집중 시간(분) -->
+	
+	                    <com.mobsandgeeks.ui.TypefaceTextView
+	                        android:id="@+id/tv_timer_min"
+	                        android:layout_width="110dp"
+	                        android:layout_height="65dp"
+	                        android:layout_alignParentLeft="true"
+	                        android:layout_gravity="center_vertical"
+	                        android:gravity="right"
+	                        android:text="0"
+	                        android:textColor="@color/ft_white"
+	                        android:textSize="60dp"
+	                        geekui:customTypeface="fonts/NanumBarunGothicUltraLight.ttf" />
+	
+	                    <!-- 분 단위 -->
+	
+	                    <com.mobsandgeeks.ui.TypefaceTextView
+	                        android:id="@+id/tv_timer_minUnit"
+	                        android:layout_width="35dp"
+	                        android:layout_height="20dp"
+	                        android:layout_marginLeft="-10dp"
+	                        android:layout_marginTop="-10dp"
+	                        android:layout_toRightOf="@+id/tv_timer_min"
+	                        android:gravity="center"
+	                        android:text="분"
+	                        android:textColor="@color/ft_white"
+	                        android:textSize="16dp"
+	                        geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+	
+	                    <!-- 집중 시간(초) -->
+	
+	                    <com.mobsandgeeks.ui.TypefaceTextView
+	                        android:id="@+id/tv_timer_sec"
+	                        android:layout_width="80dp"
+	                        android:layout_height="65dp"
+	                        android:layout_toRightOf="@id/tv_timer_minUnit"
+	                        android:gravity="right"
+	                        android:text="0"
+	                        android:textColor="@color/ft_white"
+	                        android:textSize="60dp"
+	                        geekui:customTypeface="fonts/NanumBarunGothicUltraLight.ttf" />
+	
+	                    <!-- 초 단위 -->
+	
+	                    <com.mobsandgeeks.ui.TypefaceTextView
+	                        android:layout_width="35dp"
+	                        android:layout_height="20dp"
+	                        android:layout_marginLeft="-13dp"
+	                        android:layout_marginTop="-10dp"
+	                        android:layout_toRightOf="@id/tv_timer_sec"
+	                        android:gravity="center"
+	                        android:text="초"
+	                        android:textColor="@color/ft_white"
+	                        android:textSize="16dp"
+	                        geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+	                </RelativeLayout>
+	            </RelativeLayout>
+	        </LinearLayout>
+	
+	        <!-- 확인 버튼 -->
+	
+	        <LinearLayout
+	            android:id="@+id/btn_timer_confirm"
+	            android:layout_width="220dp"
+	            android:layout_height="50dp"
+	            android:layout_marginTop="40dp"
+	            android:background="@drawable/ic_confirm_ko_3x"
+	            android:gravity="center"
+	            android:orientation="horizontal" >
+	
+	            <com.mobsandgeeks.ui.TypefaceTextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textColor="@color/ft_white"
+	                android:textSize="16dp" />
+	        </LinearLayout>
+	
+	        <!-- 이어 집중하기 가능 횟수 -->
+	
+	        <com.mobsandgeeks.ui.TypefaceTextView
+	            android:id="@+id/tv_timer_lap"
+	            android:layout_width="300dp"
+	            android:layout_height="30dp"
+	            android:layout_marginTop="15dp"
+	            android:gravity="center"
+	            android:text="이어 집중하기 가능(1/2)"
+	            android:textColor="@color/ft_white"
+	            android:textSize="16dp"
+	            geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+	
+	        <LinearLayout
+	            android:id="@+id/layout_timer_refocus"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:orientation="vertical" >
+	
+	            <com.mobsandgeeks.ui.TypefaceTextView
+	                android:layout_width="300dp"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:text="다시 이어서 집중을 하고 싶으시면"
+	                android:textColor="@color/ft_white"
+	                android:textSize="16dp"
+	                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+	
+	            <LinearLayout
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:orientation="horizontal" >
+	
+	                <com.mobsandgeeks.ui.TypefaceTextView
+	                    android:id="@+id/tv_timer_fifteen"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="30dp"
+	                    android:layout_marginRight="7dp"
+	                    android:gravity="center"
+	                    android:text="15"
+	                    android:textColor="#F62E5D"
+	                    android:textSize="16dp"
+	                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+	
+	                <com.mobsandgeeks.ui.TypefaceTextView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="30dp"
+	                    android:gravity="left|center_vertical"
+	                    android:text="초 내로 휴대폰을 다시 뒤집어 주세요."
+	                    android:textColor="@color/ft_white"
+	                    android:textSize="16dp"
+	                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+	            </LinearLayout>
+	        </LinearLayout>
+	    </LinearLayout>
+	
+	</RelativeLayout>

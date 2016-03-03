@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/settings_list_height"
+    android:background="@color/ft_white"
+    android:gravity="center_vertical"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <com.mobsandgeeks.ui.TypefaceTextView
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_settingsdetail_title"
+        android:layout_width="150dp"
+        android:gravity="center_vertical"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"        
+        android:layout_marginLeft="16dp"
+        android:textSize="18dp"
+        android:textColor="@color/ft_black"
+        geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/iv_settingsdetail_checkmark"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        />
+
+</RelativeLayout>

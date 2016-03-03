@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.realnumworks.focustimer"
+    android:versionCode="13"
+    android:versionName="0.9.7" >
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.realnumworks.focustimer" >
+    </instrumentation>
+
+    <application
+        android:name="com.realnumworks.focustimer.MainApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait" >
+
+        <!-- Main Launcher Activity -->
+        <activity
+            android:name="com.realnumworks.focustimer.view.main.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main Test Activity -->
+        <activity
+            android:name=".test.MainTestActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.realnumworks.focustimer.view.main.AlarmActivity"
+            android:label="알람 설정 메뉴"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.realnumworks.focustimer.view.history.HistoryActivity"
+            android:label="@string/title_activity_record"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" >
+        </activity>
+        <activity
+            android:name="com.realnumworks.focustimer.view.chart.ChartActivity"
+            android:label="@string/title_activity_chart"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" >
+        </activity>
+        <activity
+            android:name="com.realnumworks.focustimer.view.timer.TimerActivity"
+            android:label="@string/title_activity_timer"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.realnumworks.focustimer.view.theme.ThemeListActivity"
+            android:label="Theme List"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" >
+        </activity>
+        <activity
+            android:name="com.realnumworks.focustimer.view.theme.ThemeDetailActivity"
+            android:label="테마 정보"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" >
+        </activity>
+        <activity
+            android:name="com.realnumworks.focustimer.view.settings.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" >
+        </activity>
+        <activity
+            android:name="com.realnumworks.focustimer.view.settings.SettingsDetailActivity"
+            android:label="설정"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" >
+        </activity>
+        <activity
+            android:name="com.realnumworks.focustimer.view.tutorial.TutorialActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.realnumworks.focustimer.view.tutorial.Tutorial02Activity"
+            android:label="튜토리얼 02"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="org.acra.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:process=":error_report"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog" >
+        </activity>
+
+        <receiver android:name="com.realnumworks.focustimer.receiver.PowerOffEventReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.realnumworks.focustimer.receiver.ScreenOnOffReceiver" >
+        </receiver>
+
+        <service android:name="com.realnumworks.focustimer.service.ThreadControlService" />
+        <service android:name="com.realnumworks.focustimer.service.StateCheckService" />
+        
+        <uses-library
+            android:name="android.test.runner"
+            android:required="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ft_white">#FFFFFF</color>
+    <color name="ft_mapGray">#A0A0A0</color>
+    <color name="ft_black">#000000</color>
+    <color name="ft_gray">#EEEEEE</color>
+    <color name="ft_mapcolor">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="ft_actionbar">#3aa0cb</color>
+    <color name="ft_595959">#989898</color>
+    
+    <color name="ft_jadeblue">#39A3CB</color>
+    <color name="ft_jadegreen">#34C1BD</color>
+    <color name="ft_alertred">#F52E5D</color>
+
+    <color name="ft_lightgreen">#90EE43</color>
+    <color name="ft_yellow">#FADC60</color>
+    <color name="ft_orange">#FC863E</color>
+    <color name="ft_red">#FC6060</color>
+    <color name="ft_purple">#7E50FE</color>
+    <color name="ft_lightblue">#3D69F9</color>
+    <color name="ft_darkblue">#29549B</color>
+    
+    <color name="ft_pureblack">#000000</color>
+    <color name="ft_nearblack">#010101</color>
+    <color name="ft_darkgray">#989898</color>
+    <color name="ft_gray01">#BEBEBE</color>
+    <color name="ft_gray02">#C8C7CC</color>
+    <color name="ft_lightgray">#F7F7F7</color>
+    <color name="ft_selectedgray">#FAFAFA</color>
+    <color name="ft_nearwhite">#FEFEFE</color>
+    <color name="ft_purewhite">#FFFFFF</color>
+
+    <drawable name="focused">#00000000</drawable>
+    <drawable name="selected">#00000000</drawable>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dslv="http://schemas.android.com/apk/res/com.realnumworks.focustimer"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ft_gray"
+    android:orientation="vertical" >
+
+    <com.mobeta.android.dslv.DragSortListView
+        android:id="@+id/dslv_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ft_white"
+        android:dividerHeight="1dp"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        dslv:collapsed_height="2dp"
+        dslv:drag_enabled="true"
+        dslv:drag_handle_id="@drawable/ic_editmode_3x"
+        dslv:drag_scroll_start="0.33"
+        dslv:drag_start_mode="onMove"
+        dslv:float_alpha="1"
+        dslv:max_drag_scroll_speed="0.5"
+        dslv:remove_enabled="false"
+        dslv:slide_shuffle_speed="0.3"
+        dslv:sort_enabled="true"
+        dslv:track_drag_sort="false"
+        dslv:use_default_controller="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical" >
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:id="@+id/tv_themelist_addnewtheme"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="23dp"
+            android:text="신규 테마 추가"
+            android:textColor="#FC6060"
+            android:textSize="18dp"
+            geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+        <ImageButton
+            android:id="@+id/btn_themelist_addnewtheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="-8dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_add_theme_v2_3x"
+            android:textSize="24dp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FocusTimer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="settings">설정</string>
+    <string name="menu">메뉴</string>
+    <string name="none">-</string>
+    <string name="continuous_checking"><u>이어 집중하기 가능</u></string>
+
+    <!-- TextViews Texts (No Variation) -->
+    <string name="this_week">This Week</string>
+
+    <!-- Defaults -->
+    <string name="default_alarmtext">25min</string>
+    <string name="default_theme">English</string>
+    <string name="default_day">Today</string>
+    <string name="default_time">3hr 02min</string>
+    <string name="title_activity_record">RecordActivity</string>
+    <string name="title_activity_chart">ChartActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_alarm">AlarmActivity</string>
+    <string name="title_activity_timer">TimerActivity</string>
+
+    <!-- ACRA Crash Report -->
+    <string name="crash_toast_text">예기치 못한 오류가 발생하여 어플이 종료됩니다. 사용에 불편을 드려 죄송합니다.</string>
+    <string name="crash_dialog_title">예기치 못한 오류 발생</string>
+    <string name="crash_dialog_text">예기치 못한 오류가 발생하여 어플이 종료됩니다. 사용에 불편을 드려 죄송합니다.\n[확인]을 누르시면 오류 정보가 개발자에게 메일로 보내지며, 이는 어플 안정성 개선에 큰 도움이 됩니다.</string>
+    <string name="crash_dialog_comment_prompt">그리고, 오류에 대해 개발자에게 추가로 전하고 싶은 이야기가 있으시면 아래에 입력해주세요.</string>
+    <string name="crash_dialog_ok_toast">감사합니다!</string>
+
+    <!-- Test -->
+    <string name="extra_test_components">Extra Test Components</string>
+    <string name="top_window_view_title">Debug Top Window View</string>
+    
+    <!-- Common Raw -->
+    <string name="sec">sec</string>
+    <string name="Save">Save</string>
+    <string name="Cancel">Cancel</string>
+    <string name="MANAGE">MANAGE</string>
+    <string name="SEND">SEND</string>
+    <string name="ON">ON</string>
+    <string name="OFF">OFF</string>
+    <string name="RESULT">RESULT</string>
+    <string name="DMRouter_ON">DMRouter - TURN ON</string>
+    <string name="DMRouter_OFF">DMRouter - TURN OFF</string>
+    <string name="OK">OK</string>
+    <string name="KB">KB</string>
+    <string name="MB">MB</string>
+    <string name="SELECT_ALL">SELECT ALL</string>
+    <string name="DESELECT_ALL">DESELECT ALL</string>
+    <string name="READ">READ</string>
+    <string name="WRITE">WRITE</string>
+    <string name="MKDIR">MKDIR</string>
+    <string name="INIT">INIT</string>
+    <string name="LINK">LINK</string>
+    <string name="UNLINK">UNLINK</string>
+    <string name="GET">GET</string>
+    <string name="SET">SET</string>
+    <string name="QUIT">QUIT</string>
+    <string name="Exit">Exit</string>
+    <string name="N_A">N&#47;A</string>
+    <string name="BAND">BAND</string>
+    <string name="RAT">RAT</string>
+    <string name="RESET">RESET</string>
+    <string name="RECONNECT">RECONNECT</string>
+    <string name="Upload">Upload</string>
+    <string name="Uploading">Uploading</string>
+    <string name="Uploaded">Uploaded</string>
+    <string name="Upload_Cancel">Upload Cancel</string>
+    <string name="Wait_for_a_sec">Wait for a sec..</string>
+    
+</resources>

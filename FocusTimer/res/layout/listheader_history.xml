@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.mobsandgeeks.ui.TypefaceTextView
+        android:id="@+id/tv_record_header"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="#f7f7f7"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="header"
+        android:textColor="@color/ft_jadeblue"
+        android:textSize="14dp"
+        geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+</FrameLayout>

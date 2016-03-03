@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="focustimer-lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/FocusTimer-lib/bin/focustimer-lib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

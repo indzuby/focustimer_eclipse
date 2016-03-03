@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="dexedLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/FocusTimer/bin/dexedLibs/android-support-v4-1590821a7319b116b00669ea82ff3861.jar!/" />
+      <root url="jar://$PROJECT_DIR$/FocusTimer/bin/dexedLibs/focustimer-lib-28257777db21bfccec1f1fdc52eff828.jar!/" />
+      <root url="jar://$PROJECT_DIR$/FocusTimer/bin/dexedLibs/acra-4.5.0-38bbabe8fa849b229f807ffeba1a606c.jar!/" />
+      <root url="jar://$PROJECT_DIR$/FocusTimer/bin/dexedLibs/android-support-v7-appcompat-d781ed436bb779b509d338e13c706837.jar!/" />
+      <root url="jar://$PROJECT_DIR$/FocusTimer/bin/dexedLibs/android-support-v7-appcompat-a0b0ad490ebc7eaeaf3b6f65eca98be1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

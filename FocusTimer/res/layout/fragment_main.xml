@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- Theme Name & Day, Focus Time -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:id="@+id/tv_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Reading"
+            android:textColor="#89ee43"
+            android:textSize="40dp"
+            geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:id="@+id/tv_day"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="오늘"
+            android:textColor="@color/ft_white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            geekui:customTypeface="fonts/NanumBarunGothicBold.ttf" />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_main_bigtimes"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_numhour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                android:gravity="right"
+                android:text="X"
+                android:textColor="@color/ft_white"
+                android:textSize="60dp"
+                geekui:customTypeface="fonts/NanumBarunGothicUltraLight.ttf" />
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_hour"
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:text="시간"
+                android:textColor="@color/ft_white"
+                android:textSize="16dp"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_numMin"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                android:gravity="right"
+                android:text="0"
+                android:textColor="@color/ft_white"
+                android:textSize="60dp"
+                geekui:customTypeface="fonts/NanumBarunGothicUltraLight.ttf" />
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_min"
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:text="분"
+                android:textColor="@color/ft_white"
+                android:textSize="16dp"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+        </LinearLayout>
+
+    <!-- Map Layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" >
+
+        <!-- This Week & Time -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_thisweek"
+                android:layout_width="80dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="left|center_vertical"
+                android:text="이번 주"
+                android:textColor="@color/ft_white"
+                android:textSize="16dp"
+                geekui:customTypeface="fonts/NanumBarunGothicBold.ttf" />
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_weekfocustime"
+                android:layout_width="120dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="-15dp"
+                android:gravity="center_vertical|left"
+                android:text="10시간 30분"
+                android:textColor="@color/ft_white"
+                android:textSize="16dp"
+                geekui:customTypeface="fonts/NanumBarunGothicBold.ttf" />
+        </LinearLayout>
+
+        <!-- A Gray Line -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/ft_mapcolor" />
+
+        <!-- Map Contents -->
+
+
+        <!-- Map -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="9dp" >
+
+            <!-- Day Line -->
+
+            <TableRow
+                android:id="@+id/row_days"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:weightSum="7" >
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_day0"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    v=""
+                    android:text="일"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_day1"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="월"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_day2"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="화"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_day3"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="수"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_day4"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="목"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_day5"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="금"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_day6"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="토"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+            </TableRow>
+
+            <!-- Date Line -->
+
+            <TableRow
+                android:id="@+id/llayout_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:weightSum="7" >
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_date0"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="10/23"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_date1"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="1/2"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_date2"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="1/23"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_date3"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="1/23"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_date4"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="1/23"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_date5"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="1/23"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_date6"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="1/23"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+            </TableRow>
+
+            <!-- FocusTime Line -->
+
+            <TableRow
+                android:id="@+id/llayout_focustimes"
+                android:layout_height="24dp"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:weightSum="7" >
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_ft0"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_ft1"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="3m"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_ft2"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_ft3"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="1s"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_ft4"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="30m"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_ft5"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="22s"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+                <com.mobsandgeeks.ui.TypefaceTextView
+                    android:id="@+id/tv_ft6"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="10.1h"
+                    android:textColor="@color/ft_white"
+                    android:textSize="14dp"
+                    geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <!-- Two Buttons -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- Record Button -->
+
+        <ImageButton
+            android:id="@+id/btn_record"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_history_ko_3x" />
+
+        <!-- Chart Button -->
+
+        <ImageButton
+            android:id="@+id/btn_chart"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="80dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_chart_ko_3x" />
+    </LinearLayout>
+
+</LinearLayout>

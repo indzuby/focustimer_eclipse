@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:geekui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp" >
+
+        <!-- Date, Day, Time -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <!-- Date, Day -->
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_record_title"
+                android:layout_width="150dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="0월 00일(월)"
+                android:textColor="@color/ft_black"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+
+            <!-- Time -->
+
+            <com.mobsandgeeks.ui.TypefaceTextView
+                android:id="@+id/tv_record_text"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="오전 9:57"
+                android:textColor="@color/ft_jadeblue"
+                android:textSize="12dp"
+                geekui:customTypeface="fonts/NanumBarunGothic.ttf" />
+        </LinearLayout>
+
+        <!-- Focus Time -->
+
+        <com.mobsandgeeks.ui.TypefaceTextView
+            android:id="@+id/tv_record_bigtext"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"
+            android:paddingRight="16dp"
+            android:text="10분 2초"
+            android:textColor="@color/ft_black"
+            android:textSize="24dp"
+            geekui:customTypeface="fonts/NanumBarunGothicUltraLight.ttf" />
+    </RelativeLayout>
+
+</FrameLayout>

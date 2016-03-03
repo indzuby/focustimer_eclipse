@@ -1,0 +1,8 @@
+FocusTimer/bin/
+FocusTimer/gen/
+FocusTimer-lib/bin/
+FocusTimer-lib/gen/
+android-support-v7-appcompat/bin/
+android-support-v7-appcompat/gen/
+
+ViewPagerIndicator/gen/

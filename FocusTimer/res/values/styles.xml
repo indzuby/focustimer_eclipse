@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.PageIndicatorDefaults">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Theme without ActionBar shadow (inherits main theme) -->
+    <style name="NoActionBarShadowTheme" parent="Theme.AppCompat.Light">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>
