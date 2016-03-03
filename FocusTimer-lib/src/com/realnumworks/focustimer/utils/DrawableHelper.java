@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.v4.content.res.ResourcesCompat;
 import android.view.View;
 
 @SuppressLint("NewApi")
@@ -26,8 +27,8 @@ public class DrawableHelper {
 	}
 
 	public static Drawable getDrawable(Context context, int id) {
-		if (Build.VERSION.SDK_INT >= 21 /* Build.VERSION_CODES.LOLLIPOP */) {
-			return context.getResources().getDrawable(id, context.getTheme());
+		if (Build.VERSION.SDK_INT >= 22 /* Build.VERSION_CODES.LOLLIPOP */) {
+			return ResourcesCompat.getDrawable(context.getResources(), id, context.getTheme());
 		} else {
 			return context.getResources().getDrawable(id);
 		}

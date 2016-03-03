@@ -5,5 +5,10 @@
 	<classpathentry excluding="com/realnumworks/focustimer/DayRecordFragment.java|com/realnumworks/focustimer/DefaultRecordFragment.java|com/realnumworks/focustimer/HistoryActivity.java|com/realnumworks/focustimer/MonthRecordFragment.java|com/realnumworks/focustimer/WeekRecordFragment.java" kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="/Users/user1/Documents/dev/focustimer-eclipse/FocusTimer-lib/libs/android-support-v7-appcompat.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/Users/user1/Documents/dev/focustimer-eclipse/FocusTimer-lib/libs/android-support-v7-appcompat.jar"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
