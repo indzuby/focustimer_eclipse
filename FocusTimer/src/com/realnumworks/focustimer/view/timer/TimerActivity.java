@@ -12,6 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -255,7 +256,10 @@ public class TimerActivity extends Activity {
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		confirm();
+		Log.d("KEYCODE", keyCode+"");
+		if(keyCode != KeyEvent.KEYCODE_HOME && keyCode != KeyEvent.KEYCODE_MOVE_HOME &&keyCode!=KeyEvent.KEYCODE_POWER) {
+			return false;
+		}
 		return super.onKeyDown(keyCode, event);
 	}
 

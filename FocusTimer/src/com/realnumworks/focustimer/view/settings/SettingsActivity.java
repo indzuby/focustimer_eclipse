@@ -218,5 +218,6 @@ public class SettingsActivity extends ActionBarActivity {
 		super.onDestroy();
 		setDB();
 		StateSingleton.getInstance().stateCheckThread.updateCurrentSettings(currentSettings);
+		StateSingleton.getInstance().setPstate(StateSingleton.PSTATE_MODE_AWAY);
 	}
 }

@@ -74,6 +74,9 @@ public class StateCheckService extends Service implements Runnable{
 			dbhelper.close();
 		}
 	}
+	public void updateCurrentSettings(Settings currentSettings) {
+		this.currentSettings = currentSettings;
+	}
 	
 	public void popupNotification(int startId){
 		// 노티피케이션 띄우기
@@ -93,7 +96,6 @@ public class StateCheckService extends Service implements Runnable{
 		while (runnable) {
 
 			updateZstate();
-
 			int zstate = StateSingleton.getInstance().getZstate();
 			int tstate = StateSingleton.getInstance().getTstate();
 			int pstate = StateSingleton.getInstance().getPstate();
@@ -110,6 +112,7 @@ public class StateCheckService extends Service implements Runnable{
 				}
 				case StateSingleton.ZSTATE_MODE_TURNING: {
 					// 시작 진동 ON 상태 & 근접 센서가 등록이 안 되어 있으면, 근접 센서 리스너를 등록한다.
+					Logs.d("TURNING",currentSettings.isVibrateOn()+"");
 					if (currentSettings.isVibrateOn()) {
 						enableProximitySensor(true);
 					}
@@ -136,8 +139,8 @@ public class StateCheckService extends Service implements Runnable{
 		// 진동 설정 On일 경우
 		if (!currentSettings.isVibrateOn()) {
 			enableProximitySensor(false); // 가속도 센서 unregistered
-		}
-
+		}else 
+			enableProximitySensor(true);
 		switch (tstate) {
 			case StateSingleton.TSTATE_MODE_FOCUSING:
 				Log.d("StartLapping",TimerSingleton.getInstance().getLapCount()+"");

@@ -30,7 +30,7 @@ public class StateSingleton {
 	public static final int THEME_MODE_LIST = 0;
 	public static final int THEME_MODE_EDIT = 1;
 
-	private int pstate = -1, zstate = -1, tstate = -1, dstate = STARTWITH_SUNDAY;
+	private int pstate = 0, zstate = -1, tstate = -1, dstate = STARTWITH_SUNDAY;
 	private int theme_mode = THEME_MODE_LIST;
 	private float zRate = 0;
 	public String currentThemeId = null;

@@ -17,6 +17,7 @@ import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -216,6 +217,8 @@ public class MainActivity extends MainViewPagerActivity implements View.OnClickL
 			dbm.insertInitSettings();
 		}
 		set = dbm.getSettings();
+//		StateSingleton.getInstance().stateCheckThread.updateCurrentSettings(set);
+		
 	}
 
 	public void setLastFocusedTimeFromDB() {
@@ -535,10 +538,11 @@ public class MainActivity extends MainViewPagerActivity implements View.OnClickL
 		unregisterReceiver(mScreenOnOffReceiver);
 		dbm.close();
 	}
-
+	
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) // 뒤로가기 키를 눌렀을 때, 알림창 띄우고 종료
 	{
+		Log.d("KEYCODE", keyCode+"");
 
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			AlertDialog.Builder alertDlg = new AlertDialog.Builder(this);

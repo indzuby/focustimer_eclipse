@@ -64,6 +64,7 @@ public class StateCheckThread extends Thread {
 			dbhelper.close();
 		}
 	}
+	
 
 	public boolean isRunning() {
 		return runnable;
@@ -91,6 +92,7 @@ public class StateCheckThread extends Thread {
 				}
 				case StateSingleton.ZSTATE_MODE_TURNING: {
 					// 시작 진동 ON 상태 & 근접 센서가 등록이 안 되어 있으면, 근접 센서 리스너를 등록한다.
+					Logs.d("TURNING",currentSettings.isVibrateOn()+"");
 					if (currentSettings.isVibrateOn()) {
 						enableProximitySensor(true);
 					}
@@ -116,9 +118,9 @@ public class StateCheckThread extends Thread {
 	private void doTaskOnFaceUp(int tstate) {
 		// 진동 설정 On일 경우
 		if (!currentSettings.isVibrateOn()) {
-			enableProximitySensor(false); // 가속도 센서 unregistered
-		}
-
+			enableProximitySensor(false); // 근 센서 unregistered
+		}else 
+			enableProximitySensor(true); // 근 센서 unregistered
 		switch (tstate) {
 			case StateSingleton.TSTATE_MODE_FOCUSING:
 				if (TimerSingleton.getInstance().getLapCount() > 0) {
