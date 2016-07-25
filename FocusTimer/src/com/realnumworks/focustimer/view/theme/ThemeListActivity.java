@@ -418,7 +418,7 @@ class ThemeListAdapter extends BaseAdapter {
 		case StateSingleton.THEME_MODE_LIST:
 			iv_dragHandle.setVisibility(View.GONE);
 			iv_clickHandle.setVisibility(View.VISIBLE);
-			v_grayLine.setVisibility(View.VISIBLE);
+			v_grayLine.setVisibility(View.GONE);
 			iv_clickHandle.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {

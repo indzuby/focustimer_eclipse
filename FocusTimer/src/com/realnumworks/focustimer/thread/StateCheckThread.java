@@ -24,7 +24,7 @@ public class StateCheckThread extends Thread {
 	private boolean runnable = false;
 
 	Settings currentSettings = null;
-
+	
 	// 생성자
 	public StateCheckThread() {
 		init();

@@ -75,6 +75,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginBottom="12dp"
         android:layout_marginTop="12dp"
+        android:visibility="gone"
         android:background="@color/ft_gray01" />
 
     <LinearLayout
@@ -96,11 +97,11 @@
 
         <ImageView
             android:id="@+id/iv_click_handle"
-            android:layout_width="48dp"
-            android:layout_height="64dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="-8dp"
-            android:background="@drawable/ic_right_arrow_v2_3x" />
+            android:background="@drawable/ic_info_3x" />
     </LinearLayout>
 
 </LinearLayout>

@@ -258,7 +258,8 @@ public class TimerActivity extends Activity {
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		Log.d("KEYCODE", keyCode+"");
 		if(keyCode != KeyEvent.KEYCODE_HOME && keyCode != KeyEvent.KEYCODE_MOVE_HOME &&keyCode!=KeyEvent.KEYCODE_POWER) {
-			return false;
+			if(StateSingleton.getInstance().getTstate() == StateSingleton.TSTATE_MODE_FOCUSING)
+				return false;
 		}
 		return super.onKeyDown(keyCode, event);
 	}
